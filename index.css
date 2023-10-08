@@ -1,7 +1,7 @@
 header {
   display: flex;
-  height: 30mm;
-  font-size: large;
+  height: 20vh;
+  font-size: 4vw;
 }
 .arrangement {
   display: block;
