@@ -7,18 +7,47 @@ const balanceButton = document.getElementById("balanceButton");
 const withdrawButton = document.getElementById("withdrawButton");
 const fundLogs = document.getElementById("fundLogs");
 const withdrawLogs = document.getElementById("withdrawLogs");
+const connectLogs = document.getElementById("connectLogs");
 
 withdrawButton.onclick = withdraw;
 balanceButton.onclick = getBalance;
 connectButton.onclick = connect;
 fundButton.onclick = fund;
 
-async function connect() {
+/*async function connect() {
   if (typeof window.ethereum !== "undefined") {
     await window.ethereum.request({ method: "eth_requestAccounts" });
     connectButton.innerHTML = "Connected";
   } else {
     connectButton.innerHTML = "Please Install MetaMask";
+  }
+}*/
+
+// Check if Metamask is installed
+async function connect() {
+  if (typeof window.ethereum !== "undefined") {
+    // Initialize Metamask provider
+    const provider = new ethers.providers.Web3Provider(window.ethereum);
+
+    // Request access to the user's Ethereum account
+    await ethereum
+      .request({ method: "eth_requestAccounts" })
+      .then((accounts) => {
+        const userAddress = accounts[0];
+        logMessage(
+          connectLogs,
+          `Connected to Metamask with address: ${userAddress}`
+        );
+
+        // You can now use `provider` to interact with the Ethereum blockchain
+        // For example, you can use it to send transactions or query contract data.
+      })
+      .catch((error) => {
+        logMessage(connectLogs, "Error connecting to Metamask:" + error);
+      });
+    connectButton.innerHTML = "Connected";
+  } else {
+    console.error("Metamask is not installed");
   }
 }
 

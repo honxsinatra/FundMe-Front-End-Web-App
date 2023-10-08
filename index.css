@@ -25,7 +25,6 @@ button {
   border-radius: 5%;
 }
 
-/* CSS for Paragraphs */
 p {
   font-size: 16px;
   line-height: 1.5;
@@ -44,4 +43,33 @@ p.emphasize {
 .img {
   height: 15mm;
   margin-left: 5px;
+}
+nav ul {
+  list-style-type: none;
+  display: flex;
+}
+
+nav ul li {
+  margin-right: 20px;
+}
+
+nav ul li:last-child {
+  margin-right: 0;
+}
+
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px;
+  }
+
+  nav ul {
+    flex-direction: column;
+  }
+
+  nav ul li {
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
 }
