@@ -13,127 +13,25 @@
       <h1>Smart Contract-Integrated Fundraising Web App</h1>
     </header>
     <hr />
-    <nav>
-      <ul>
-        <li><a href="#about">About this web App</a></li>
-        <li><a href="#support">Support</a></li>
-      </ul>
-    </nav>
     <script src="./index.js" type="module"></script>
-    <div class="meta">
-      <button id="connectButton" class="arrangement">
-        Connect to Metamask
-      </button>
-      <img src="./metamask.png" alt="metamask icon" class="img" />
-    </div>
-    <div id="connectLogs" class="arrangement"></div>
-    <div class="arrangement">
-      <button id="fundButton">Fund</button>
-      <input id="ethAmount" placeholder="Amount to fund" />
-    </div>
-    <div id="fundLogs" class="arrangement"></div>
+    <main class="main">
+      <div class="connect arrangement">
+        <button id="connectButton">Connect to Metamask</button>
+        <img src="./metamask.png" alt="metamask icon" />
+      </div>
+      <div id="connectLogs" class="arrangement"></div>
+      <div class="fund arrangement">
+        <button id="fundButton">Fund</button>
+        <input id="ethAmount" placeholder="Amount to fund" />
+      </div>
+      <div id="fundLogs" class="arrangement"></div>
 
-    <button id="balanceButton" class="arrangement">getBalance</button>
-    <div id="balanceDisplay" class="arrangement"></div>
-    <button id="withdrawButton" class="arrangement">Withdraw</button>
-    <div id="withdrawLogs" class="arrangement"></div>
-    <hr />
+      <button id="balanceButton" class="arrangement">getBalance</button>
+      <div id="balanceDisplay" class="arrangement"></div>
+      <button id="withdrawButton" class="arrangement">Withdraw</button>
+      <div id="withdrawLogs" class="arrangement"></div>
 
-    <section id="about">
-      <h2>About Web App</h2>
-      <p></p>
-      <p class="emphasize">Title:</p>
-      <p>
-        Smart Contract-Integrated Fundraising Web App Summary: The Smart
-        Contract-Integrated Fundraising Web App is a powerful and versatile
-        platform designed to streamline the fundraising process for charitable
-        causes while ensuring transparency, security, and ease of use. This web
-        app serves as a template that can be customized for various fundraising
-        campaigns, allowing users to raise funds in both Ethereum (ETH) and US
-        Dollars.
-      </p>
-      <p class="with-border,,emphasize">Key Features:</p>
-      <p></p>
-      <p class="emphasize">1. Smart Contract Integration:</p>
-      <p>
-        - The core feature of the web app is its integration with smart
-        contracts on the Ethereum blockchain. These smart contracts facilitate
-        secure and automated fund management. - Users can create a customized
-        smart contract for their fundraising campaign, defining parameters such
-        as fundraising goal, duration, and beneficiary.
-      </p>
-      <p></p>
-      <p class="emphasize">2. Multi-Currency Support:</p>
-      <p>
-        - The app allows fundraisers to receive contributions in two primary
-        currencies: Ethereum (ETH) and US Dollars (USD). - Users can select
-        their preferred currency when making donations, offering flexibility to
-        both cryptocurrency enthusiasts and traditional donors.
-      </p>
-      <p></p>
-      <p class="emphasize">3. Owner-Controlled Withdrawals:</p>
-      <p>
-        - Fund withdrawals are exclusively accessible to the campaign owner or
-        organizer, ensuring that funds are used for their intended charitable
-        purposes. - The smart contract enforces withdrawal restrictions,
-        enhancing trust and transparency in the fundraising process.
-      </p>
-      <p></p>
-      <p class="emphasize">4. Targeted Fund Allocation:</p>
-      <p>
-        - The web app encourages fundraisers to specify the exact purposes or
-        projects the funds will support, such as charity initiatives, disaster
-        relief, medical expenses, or educational programs. - Donors are informed
-        about the specific cause they are contributing to, increasing
-        transparency and trust.
-      </p>
-      <p></p>
-      <p class="emphasize">5. User-Friendly Interface:</p>
-      <p>
-        - The app features an intuitive and user-friendly interface for both
-        fundraisers and donors, making it easy to create, manage, and support
-        fundraising campaigns. - Users can track the progress of campaigns, view
-        donation history, and receive notifications.
-      </p>
-      <p></p>
-      <p class="emphasize">6. Transparency and Accountability:</p>
-      <p>
-        - Every transaction and smart contract activity is recorded on the
-        Ethereum blockchain, providing a transparent and immutable ledger of all
-        donations and withdrawals. - Donors can verify the authenticity of
-        campaigns and ensure that their contributions are being used as
-        intended.
-      </p>
-      <p></p>
-      <p class="emphasize">7. Customizable Templates:</p>
-      <p>
-        - The web app offers customizable templates, allowing users to tailor
-        the look and feel of their fundraising pages to match their cause and
-        brand.
-      </p>
-      <p></p>
-      <p class="emphasize">8. Security Measures:</p>
-      <p>
-        - Robust security measures are in place to protect user data and funds,
-        including encryption, authentication, and anti-fraud mechanisms.
-      </p>
-
-      <p></p>
-      <p class="emphasize">In summary</p>
-      <p>
-        The Smart Contract-Integrated Fundraising Web App is a comprehensive
-        solution for individuals and organizations looking to conduct
-        transparent and secure fundraising campaigns. By leveraging smart
-        contract technology, multi-currency support, and a user-friendly
-        interface, this platform empowers users to make a positive impact on
-        charitable causes while ensuring accountability and trust in the
-        donation process.
-      </p>
-    </section>
-    <section id="support">
-      <h3>Contact Us</h3>
-      <h3>Email: josephhongoa2020@gmail.comprehensive</h3>
-      <h4>Skype name: live:.cid 784bfdabc7b77066</h4>
-    </section>
+      <hr />
+    </main>
   </body>
 </html>
