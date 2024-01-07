@@ -1,4 +1,4 @@
-# FundMe-Front-End-Web-App 
+# FundMe-Web3-App 
 [Web App link] (https://fund-me-front-end-web-app.vercel.app)
 # Requirements
 
