@@ -1,21 +1,12 @@
-import Image from "next/image";
+import React from "react";
+import Nav from "../Components/Nav";
 
-const Home = () => {
+const HomePage = () => {
   return (
-    <section>
-      <div>
-        <Image
-          src="/images/fundme.png"
-          alt="Icon image"
-          width={200}
-          height={200}
-        />
-      </div>
-      <nav>
-        <ul></ul>
-      </nav>
-    </section>
+    <div>
+      <Nav />
+    </div>
   );
 };
 
-export default Home;
+export default HomePage;
