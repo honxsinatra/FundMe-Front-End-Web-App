@@ -1,0 +1,34 @@
+body {
+  font-family: "Poppins";
+  font-size: 18px;
+  margin: 0;
+  height: 100vh;
+  width: 100vw;
+}
+
+.Nav {
+  width: 100%;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.ul-main {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+}
+.ul-main li {
+  display: inline-block;
+  width: 90px;
+}
+.ul-main li:hover > a {
+  color: green;
+}
+.ul-main li:hover > a::before {
+  visibility: visible;
+  scale: 1 1;
+}/*# sourceMappingURL=styles.css.map */

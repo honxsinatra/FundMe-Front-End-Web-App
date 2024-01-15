@@ -1,3 +1,5 @@
+import "../styles/styles.scss";
+
 export const metadata = {
   title: "FundRiser",
   description:
