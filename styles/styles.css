@@ -7,13 +7,22 @@ body {
 }
 
 .Nav {
-  width: 100%;
+  width: 80%;
+  margin-left: 20%;
 }
-
-ul {
-  margin: 0;
+.Nav ul {
+  margin-right: 0px;
   padding: 0;
   list-style: none;
+}
+.Nav ul li {
+  display: inline-block;
+  margin: 5%;
+  width: 90px;
+}
+.Nav ul li a {
+  text-decoration: none;
+  color: inherit;
 }
 
 .ul-main {
@@ -21,14 +30,8 @@ ul {
   justify-content: center;
   align-items: stretch;
 }
-.ul-main li {
-  display: inline-block;
-  width: 90px;
-}
-.ul-main li:hover > a {
-  color: green;
-}
-.ul-main li:hover > a::before {
+
+li:hover > a::before {
   visibility: visible;
   scale: 1 1;
 }/*# sourceMappingURL=styles.css.map */

@@ -38,6 +38,8 @@ const Nav = () => {
             </ul>
           </a>
         </li>
+        <li>Sign In</li>
+        <li>Register</li>
       </ul>
     </nav>
   );
