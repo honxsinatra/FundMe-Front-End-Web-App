@@ -1,8 +1,12 @@
 body {
   background-color: var(--color-secondary);
   color: var(--color-white);
-  font-family: "Poppins";
-  font-size: 18px;
+  font-family: CircularSp, CircularSp-Arab, CircularSp-Hebr, CircularSp-Cyrl,
+    CircularSp-Grek, CircularSp-Deva, "Helvetica Neue", helvetica, arial,
+    "Hiragino Kaku Gothic ProN", Meiryo, "MS Gothic", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
   margin: 0;
   height: 100vh;
 }
@@ -11,23 +15,24 @@ body {
   --color-primary: #1db954;
   --color-secondary: #000000;
   --color-white: #ffffff;
-  --color-grey2: #191414;
+  --color-grey2: #121212;
   --box-shadow-1: 0 3px 15px rgba(0, 0, 0, 0.3);
   --border-radius: 10px;
+  --font-size: x-large;
 }
 //Nav styles
 .Nav {
-  font-size: x-large;
+  font-size: var(--font-size);
   background-color: var(--color-grey2);
-  height: 25%;
-  width: 25%;
+  height: 25vh;
+  width: 25vw;
   margin: 1%;
   border-radius: var(--border-radius);
   ul {
     list-style: none;
     padding: 5%;
     li {
-      margin-bottom: 10%;
+      margin-bottom: 5%;
       align-items: center;
       display: flex;
       a {
@@ -57,12 +62,15 @@ body {
   margin-right: 0.5rem;
 }
 
-/*.ul-main {
-  display: flex;
-  justify-content: center;
-  align-items: stretch;
+//RiserFundFor Styles
+.RFFConrainer {
+  font-size: var(--font-size);
+  background-color: var(--color-grey2);
+  height: 65vh;
+  width: 25vw;
+  margin: 1%;
+  border-radius: var(--border-radius);
 }
-li:hover > a::before {
-  visibility: visible;
-  scale: 1 1;
-}*/
+.howButton {
+  margin-top: 5vh;
+}

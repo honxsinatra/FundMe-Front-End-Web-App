@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "next/link";
 import Image from "next/image";
 import appIcon from "../public/icons/favicon.ico";
 import homeIcon from "../public/icons/homeicon.png";
@@ -10,15 +11,15 @@ const Nav = () => {
       <ul>
         <li>
           <Image src={appIcon} alt="App icon" height={22} className="appIcon" />
-          <a href="#">FundRiser</a>
+          <Link href="#">FundRiser</Link>
         </li>
         <li>
           <Image src={homeIcon} alt="Home Icon" className="homeIcon" />
-          <a href="#">Home</a>
+          <Link href="#">Home</Link>
         </li>
         <li>
           <Image src={searchIcon} alt="Search icon" className="searchIcon" />
-          <a href="#">Search</a>
+          <Link href="#">Search</Link>
         </li>
       </ul>
     </nav>
