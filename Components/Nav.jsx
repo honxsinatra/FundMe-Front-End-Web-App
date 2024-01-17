@@ -1,45 +1,25 @@
 import React from "react";
+import Image from "next/image";
+import appIcon from "../public/icons/favicon.ico";
+import homeIcon from "../public/icons/homeicon.png";
+import searchIcon from "../public/icons/search.png";
 
 const Nav = () => {
   return (
     <nav className="Nav">
-      <ul className="ul-main">
+      <ul>
         <li>
+          <Image src={appIcon} alt="App icon" height={22} className="appIcon" />
+          <a href="#">FundRiser</a>
+        </li>
+        <li>
+          <Image src={homeIcon} alt="Home Icon" className="homeIcon" />
           <a href="#">Home</a>
         </li>
         <li>
-          <a href="#">Mechanism</a>
+          <Image src={searchIcon} alt="Search icon" className="searchIcon" />
+          <a href="#">Search</a>
         </li>
-        <li>
-          <a href="#">
-            Rise Funds For
-            <ul>
-              <li>
-                <a href="#">Charity</a>
-              </li>
-              <li>
-                <a href="#">Group Goals</a>
-              </li>
-              <li>
-                <a href="#">Event</a>
-              </li>
-              <li>
-                <a href="#">Party</a>
-              </li>
-              <li>
-                <a href="#">Project</a>
-              </li>
-              <li>
-                <a href="#">Crisis Relief</a>
-              </li>
-              <li>
-                <a href="#">Other</a>
-              </li>
-            </ul>
-          </a>
-        </li>
-        <li>Sign In</li>
-        <li>Register</li>
       </ul>
     </nav>
   );
