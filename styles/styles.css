@@ -2,7 +2,7 @@ body {
   background-color: var(--color-secondary);
   color: var(--color-white);
   font-family: CircularSp, CircularSp-Arab, CircularSp-Hebr, CircularSp-Cyrl, CircularSp-Grek, CircularSp-Deva, "Helvetica Neue", helvetica, arial, "Hiragino Kaku Gothic ProN", Meiryo, "MS Gothic", sans-serif;
-  font-size: 16px;
+  font-size: var(--font-size);
   font-style: normal;
   font-weight: 400;
   margin: 0;
@@ -13,14 +13,15 @@ body {
   --color-primary: #1db954;
   --color-secondary: #000000;
   --color-white: #ffffff;
+  --color-grey1: #242424;
   --color-grey2: #121212;
-  --box-shadow-1: 0 3px 15px rgba(0, 0, 0, 0.3);
+  --box-shadow-1: 0 1px 1px var(--color-primary);
   --border-radius: 10px;
-  --font-size: x-large;
+  --font-size: 16px;
+  --transition: all ease-in-out 0.4s;
 }
 
 .Nav {
-  font-size: var(--font-size);
   background-color: var(--color-grey2);
   height: 25vh;
   width: 25vw;
@@ -29,7 +30,8 @@ body {
 }
 .Nav ul {
   list-style: none;
-  padding: 5%;
+  padding-left: 2vw;
+  padding-top: 1vw;
 }
 .Nav ul li {
   margin-bottom: 5%;
@@ -39,10 +41,17 @@ body {
 .Nav ul li a {
   text-decoration: none;
   color: inherit;
+  padding: 1%;
 }
-.Nav ul li:hover {
-  box-shadow: 0 3px 5px var(--color-primary);
+.Nav ul li:not(:first-child):not(:nth-child(2)) {
+  font-size: large;
+  color: #9f9f9f;
+}
+.Nav ul li:not(:first-child):hover {
+  padding-left: 2%;
+  box-shadow: 0 1px 1px var(--color-primary);
   border-radius: var(--border-radius);
+  cursor: pointer;
 }
 
 .appIcon {
@@ -62,14 +71,46 @@ body {
 }
 
 .RFFConrainer {
+  box-sizing: border-box;
   font-size: var(--font-size);
   background-color: var(--color-grey2);
   height: 65vh;
   width: 25vw;
   margin: 1%;
   border-radius: var(--border-radius);
+  padding-top: 0.5vw;
 }
-
-.howButton {
-  margin-top: 5vh;
+.RFFConrainer .gift-container {
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
+.RFFConrainer .gift-container h2 {
+  margin-right: 0.5vw;
+}
+.RFFConrainer .gift-container img {
+  background-color: var(--color-secondary);
+  border-radius: var(--border-radius);
+}
+.RFFConrainer ul {
+  list-style: none;
+  align-items: center;
+  justify-content: center;
+  display: block;
+}
+.RFFConrainer ul li {
+  height: 5vh;
+  width: 17vw;
+  color: var(--color-white);
+  background-color: var(--color-primary);
+  margin-top: 2.5vh;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  border-radius: var(--border-radius);
+}
+.RFFConrainer ul li:hover {
+  box-shadow: 0 1px 1px var(--color-primary);
+  border-radius: var(--border-radius);
+  background-color: var(--color-grey1);
 }/*# sourceMappingURL=styles.css.map */
