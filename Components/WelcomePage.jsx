@@ -39,6 +39,15 @@ const WelcomePage = () => {
             every contribution is making a difference. We believe in openness,
             accountability, and the power of collective action
           </p>
+          <div className="how-active">
+            <h1></h1>
+          </div>
+
+          {/*<h1>Why Blockchain technology?</h1>
+          <h1>
+            Do you want to know the allocation of your donation, who funded,
+            what amount have been funded?
+  </h1>*/}
         </div>
       </div>
     </div>
