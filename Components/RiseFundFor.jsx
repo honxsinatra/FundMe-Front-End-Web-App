@@ -7,7 +7,7 @@ const RiseFundFor = () => {
   return (
     <div className="RFFConrainer">
       <div className="gift-container">
-        <h2>Raise fund for</h2>
+        <h2>Read the DApp conract</h2>
         <Image
           src={gift}
           loading="lazy"
@@ -17,13 +17,18 @@ const RiseFundFor = () => {
         />
       </div>
       <ul>
-        <li>Charity</li>
-        <li>Project</li>
-        <li>Event/Party</li>
-        <li>DisasterRelief</li>
-        <li>SpaceResearch</li>
-        <li>MedicalAid</li>
-        <li>Other</li>
+        <li>
+          <h1>Fund</h1>
+        </li>
+        <li>
+          <h2>Get Balance</h2>
+        </li>
+        <li>
+          <h2>Donators</h2>
+        </li>
+        <li>
+          <h2>Withdraw</h2>
+        </li>
       </ul>
     </div>
   );
