@@ -17,8 +17,9 @@ body {
   --color-white: #ffffff;
   --color-grey1: #242424;
   --color-grey2: #121212;
+  --color-grey3: #757474;
   --box-shadow-1: 0 1px 1px var(--color-primary);
-  --border-radius: 10px;
+  --border-radius: 20px;
   --font-size: 1rem;
   --transition: all ease-in-out 0.4s;
 }
@@ -177,30 +178,24 @@ body {
   }
 }
 
-.typing-container {
-  text-align: center;
-  margin-top: 2%;
-}
-
-.typing-text {
-  color: var(--color-primary);
-  display: inline-block;
-  overflow: hidden;
-  white-space: nowrap;
-  font-size: 2rem;
-  font-weight: 600;
-}
-
-.blink {
-  animation: blink-caret 0.5s step-end infinite;
-}
-
-@keyframes blink-caret {
-  from,
-  to {
-    border-color: transparent;
+//Connect to Metamask
+.connect {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--color-grey3);
+  margin: 1%;
+  button {
+    margin-left: 1%;
+    background-color: var(--color-primary);
+    width: 8vw;
+    height: 5vh;
+    border-radius: var(--border-radius);
   }
-  50% {
-    border-color: var(--color-secondary);
+  img {
+    margin-left: 0.5%;
+    height: 5vh;
+    width: 5vh;
+    border-radius: 50%;
   }
 }
