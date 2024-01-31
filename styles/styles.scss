@@ -153,12 +153,11 @@ body {
       border-radius: var(--border-radius);
     }
   }
-  ul {
-    list-style: none;
+  .buttons {
     align-items: center;
     justify-content: center;
-    display: block;
-    li {
+    display: flex;
+    button {
       height: 6vh;
       width: 17vw;
       color: var(--color-secondary);
@@ -169,7 +168,7 @@ body {
       display: flex;
       border-radius: var(--border-radius);
     }
-    li:hover {
+    button:hover {
       color: var(--color-white);
       box-shadow: 0 1px 1px var(--color-primary);
       border-radius: var(--border-radius);
@@ -185,17 +184,16 @@ body {
   align-items: center;
   color: var(--color-grey3);
   margin: 1%;
-  button {
-    margin-left: 1%;
-    background-color: var(--color-primary);
-    width: 8vw;
-    height: 5vh;
-    border-radius: var(--border-radius);
-  }
   img {
     margin-left: 0.5%;
     height: 5vh;
     width: 5vh;
     border-radius: 50%;
   }
+}
+.customButton {
+  margin-left: 1vw;
+  height: 2.3vw;
+  background-color: var(--color-primary);
+  border-radius: var(--border-radius);
 }

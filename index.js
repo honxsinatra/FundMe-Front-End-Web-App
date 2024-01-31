@@ -21,7 +21,7 @@ fundButton.onclick = fund;
   } else {
     connectButton.innerHTML = "Please Install MetaMask";
   }
-}*/
+}
 
 // Check if Metamask is installed
 async function connect() {
@@ -49,7 +49,7 @@ async function connect() {
   } else {
     console.error("Metamask is not installed");
   }
-}
+}*/
 
 function logMessage(logType, message) {
   const logElement = document.createElement("div");

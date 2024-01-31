@@ -1,11 +1,10 @@
 body {
-  background-color: var(--color-secondary);
+  background: var(--color-secondary);
   color: var(--color-white);
   font-family: CircularSp, CircularSp-Arab, CircularSp-Hebr, CircularSp-Cyrl, CircularSp-Grek, CircularSp-Deva, "Helvetica Neue", helvetica, arial, "Hiragino Kaku Gothic ProN", Meiryo, "MS Gothic", sans-serif;
   font-size: var(--font-size);
   font-style: normal;
   font-weight: 400;
-  margin: 0;
   height: 100vh;
 }
 
@@ -15,10 +14,61 @@ body {
   --color-white: #ffffff;
   --color-grey1: #242424;
   --color-grey2: #121212;
+  --color-grey3: #757474;
   --box-shadow-1: 0 1px 1px var(--color-primary);
-  --border-radius: 10px;
-  --font-size: 16px;
+  --border-radius: 20px;
+  --font-size: 1rem;
   --transition: all ease-in-out 0.4s;
+}
+
+.fundraiser {
+  color: var(--color-primary);
+  font-weight: 600;
+}
+
+.welcomeContainer {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1.08fr 2.92fr;
+  grid-column-gap: 1%;
+}
+.welcomeContainer .left-side .fixed {
+  position: fixed;
+}
+.welcomeContainer .left-side footer {
+  position: fixed;
+  bottom: 1.3%;
+  width: 100%;
+}
+.welcomeContainer .right-side {
+  background-color: var(--color-grey2);
+  border-radius: var(--border-radius);
+}
+.welcomeContainer .right-side .right-container {
+  width: 100%;
+  height: 100%;
+  border-radius: var(--border-radius);
+}
+.welcomeContainer .right-side .right-container h1 {
+  padding-top: 2%;
+  text-align: center;
+}
+.welcomeContainer .right-side .right-container .images {
+  width: 96%;
+  display: grid;
+  grid-template-columns: 2fr 2fr;
+  grid-gap: 2%;
+  margin: auto;
+}
+.welcomeContainer .right-side .right-container .images img {
+  border-radius: var(--border-radius);
+  width: 100%;
+  height: 100%;
+}
+.welcomeContainer .right-side .right-container p {
+  padding: 2%;
+  font-size: 1.1rem;
+  line-height: 1.5;
 }
 
 .Nav {
@@ -48,7 +98,7 @@ body {
   color: #9f9f9f;
 }
 .Nav ul li:not(:first-child):hover {
-  padding-left: 2%;
+  padding-left: 1%;
   box-shadow: 0 1px 1px var(--color-primary);
   border-radius: var(--border-radius);
   cursor: pointer;
@@ -77,8 +127,8 @@ body {
   height: 65vh;
   width: 25vw;
   margin: 1%;
+  margin-top: 3%;
   border-radius: var(--border-radius);
-  padding-top: 0.5vw;
 }
 .RFFConrainer .gift-container {
   align-items: center;
@@ -89,28 +139,48 @@ body {
   margin-right: 0.5vw;
 }
 .RFFConrainer .gift-container img {
-  background-color: var(--color-secondary);
   border-radius: var(--border-radius);
 }
-.RFFConrainer ul {
-  list-style: none;
+.RFFConrainer .buttons {
   align-items: center;
   justify-content: center;
-  display: block;
+  display: flex;
 }
-.RFFConrainer ul li {
-  height: 5vh;
+.RFFConrainer .buttons button {
+  height: 6vh;
   width: 17vw;
-  color: var(--color-white);
+  color: var(--color-secondary);
   background-color: var(--color-primary);
-  margin-top: 2.5vh;
+  margin-top: 3.5vh;
   align-items: center;
   justify-content: center;
   display: flex;
   border-radius: var(--border-radius);
 }
-.RFFConrainer ul li:hover {
+.RFFConrainer .buttons button:hover {
+  color: var(--color-white);
   box-shadow: 0 1px 1px var(--color-primary);
   border-radius: var(--border-radius);
   background-color: var(--color-grey1);
+}
+
+.connect {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--color-grey3);
+  margin: 1%;
+}
+.connect img {
+  margin-left: 0.5%;
+  height: 5vh;
+  width: 5vh;
+  border-radius: 50%;
+}
+
+.customButton {
+  margin-left: 1vw;
+  height: 2.3vw;
+  background-color: var(--color-primary);
+  border-radius: var(--border-radius);
 }/*# sourceMappingURL=styles.css.map */

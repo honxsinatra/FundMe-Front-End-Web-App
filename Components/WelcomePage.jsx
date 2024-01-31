@@ -1,3 +1,4 @@
+"use client";
 import Nav from "./Nav";
 import RiseFundFor from "./RiseFundFor";
 import Image from "next/image";
@@ -8,17 +9,19 @@ import "@rainbow-me/rainbowkit/styles.css";
 import { getDefaultWallets, RainbowKitProvider } from "@rainbow-me/rainbowkit";
 import { configureChains, createConfig, WagmiConfig } from "wagmi";
 import { sepolia, goerli, polygonMumbai } from "wagmi/chains";
+import { alchemyProvider } from "wagmi/providers/alchemy";
 import { publicProvider } from "wagmi/providers/public";
-import { ConnectButton } from "@rainbow-me/rainbowkit";
+import { CustomConnectButton } from "./CustomConnectButton";
 //import { abi, contractAddress } from "../constants.js";
 
 const WelcomePage = () => {
   const { chains, publicClient } = configureChains(
     [sepolia, goerli, polygonMumbai],
-    [publicProvider()]
+    [alchemyProvider({ apiKey: process.env.ALCHEMY_ID }), publicProvider()]
   );
   const { connectors } = getDefaultWallets({
     appName: "FundRaiser DApp",
+    projectId: "process.env.PROJECT_ID",
     chains,
   });
   const wagmiConfig = createConfig({
@@ -29,7 +32,7 @@ const WelcomePage = () => {
 
   return (
     <WagmiConfig config={wagmiConfig}>
-      <RainbowKitProvider chains={chains}>
+      <RainbowKitProvider coolMode chains={chains}>
         <div className="welcomeContainer">
           <div className="left-side">
             <div className="fixed">
@@ -41,10 +44,10 @@ const WelcomePage = () => {
           <div className="right-side">
             <div className="right-container">
               <div className="connect">
-                Please connect to Metamask <ConnectButton />
+                Please connect to Metamask <CustomConnectButton />
                 <Image src={metamask} alt="metamask icon" />
               </div>
-              <div id="connectLogs" class="arrangement"></div>
+              <div id="connectLogs" className="arrangement"></div>
               <h1>
                 Welcome to <span className="fundraiser">FUNDRAISER</span>
                 Empowering Change with Transparency through Blockchain
