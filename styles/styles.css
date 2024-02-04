@@ -183,4 +183,19 @@ body {
   height: 2.3vw;
   background-color: var(--color-primary);
   border-radius: var(--border-radius);
+}
+
+.fundRoom {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.fundRoom button {
+  width: 5.5vw !important;
+}
+.fundRoom input {
+  width: 10vw;
+  border-radius: var(--border-radius);
+  margin-left: 0.5vw;
+  height: 5vh;
 }/*# sourceMappingURL=styles.css.map */
