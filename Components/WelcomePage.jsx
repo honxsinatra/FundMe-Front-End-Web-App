@@ -1,6 +1,6 @@
 "use client";
 import Nav from "./Nav";
-import RiseFundFor from "./RiseFundFor";
+import RiseFundFor from "./RiseFundFor.jsx";
 import Image from "next/image";
 import buku from "../public/images/buku.jpg";
 import raiser from "../public/images/raiser.jpg";
