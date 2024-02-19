@@ -1,13 +1,29 @@
 "use client";
-import { ethers } from "../ethers-5.6.esm.min.js";
+
+let ethers;
+if (typeof window !== "undefined") {
+  ethers = require("ethers");
+}
+//import { ethers } from "../ethers-5.6.esm.min.js";
 import { abi, contractAddress } from "../constants.js";
 import Image from "next/image";
 import { React, useState, useRef } from "react";
 import gift from "../public/icons/downarrow.gif";
+import { useReadContract } from "wagmi";
 
 const RiseFundFor = () => {
   const [ethAmount, setEthAmount] = useState("");
   const [Logs, setLogs] = useState(""); // State to manage logs
+
+  function ReadContract() {
+    const { data: balance } = useReadContract({
+      ...wagmiContractConfig,
+      functionName: "balanceOf",
+      args: ["0x03A71968491d55603FFe1b11A9e23eF013f75bCF"],
+    });
+
+    return <div>Balance: {balance?.toString()}</div>;
+  }
 
   const handleEthAmountChange = (event) => {
     setEthAmount(event.target.value);
